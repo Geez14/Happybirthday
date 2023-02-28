@@ -44,10 +44,10 @@ class MainActivity : ComponentActivity() {
 fun HappyBirthdayMessageWithImage(name: String, sender: String) {
     val image = painterResource(id = R.drawable.birthday)
     Image(
-        painter = image,     // makin some kinda pointer of the image and fitting the value
+        painter = image,     // making some kinda pointer of the image and fitting the value
         contentDescription = null, // Talkback off
         modifier = Modifier.fillMaxSize(),
-        contentScale = ContentScale.Crop // Maintaing the asspect ration acording to the screen size
+        contentScale = ContentScale.Crop // Maintaining the aspect ration according to the screen size
     )
     HappyBirthdayMessage(name = name, sender = sender)
 }
@@ -90,6 +90,7 @@ Giving in to temptation is a way to immediately increase your happiness. Be happ
             text = body,
             modifier = Modifier
                 .padding(top = 20.dp)
+                .align(Alignment.CenterHorizontally)
                 .wrapContentWidth(align = Alignment.Start),
             color = Color.Yellow,
             fontFamily = FontFamily.Cursive,
